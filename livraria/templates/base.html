@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livraria</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-200">
+    {% include 'nav.html' %}
+    <main class="flex flex-col py-6 px-12 items-center">
+      {% block content %} {% endblock %}
+    </main>
+  </body>
+</html>

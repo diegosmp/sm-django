@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block content %}
+<h2 class="text-3xl font-bold">Login</h2>
+<form
+  action="{% url 'home' %}"
+  method="post"
+  class="flex flex-col py-6 px-4 w-72 gap-4 items-center"
+>
+  {% csrf_token %}
+  <div class="flex flex-col gap-2">
+    <label for="" class="font-semibold">Usuário:</label>
+    <input
+      type="text"
+      name="usuario"
+      placeholder="Digite seu usuário"
+      class="placeholder:px-2 h-8 rounded-md text-sm px-2 w-64"
+      required
+    />
+  </div>
+
+  <div class="flex flex-col gap-2">
+    <label for="" class="font-semibold">Senha:</label>
+    <input
+      type="password"
+      name="senha"
+      placeholder="Digite sua senha"
+      class="placeholder:px-2 h-8 rounded-md text-sm px-2 w-64"
+      required
+    />
+  </div>
+
+  <button
+    class="bg-sky-500 h-10 w-32 font-bold text-zinc-800 hover:bg-sky-400 my-6"
+  >
+    Entrar
+  </button>
+</form>
+{% endblock %}
